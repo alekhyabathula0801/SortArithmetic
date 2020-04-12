@@ -10,7 +10,7 @@ for (( i=1; i<=4; i++ ))
 do
 	for(( j=i+1; j<=4; j++ ))
 	do
-		if [ ${arithmetic[j]} -gt ${arithmetic[i]} ]
+		if [ ${arithmetic[j]} -lt ${arithmetic[i]} ]
 		then
 			temp=${arithmetic[j]}
 			arithmetic[j]=${arithmetic[i]}
@@ -19,4 +19,3 @@ do
 	done
 done
 echo ${arithmetic[@]}
-
